@@ -16,16 +16,19 @@ body {
     position:absolute;
     inset: 0;
     z-index: -1;
-    --size:500px;
+   /* --size:130%; keeping it bc i like how it looks*/
     --speed: 31s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   
-    width: var(--size);
-    height: var(--size);
-    filter: blur(calc(var(--size) / 5));
-    background-image: radial-gradient(circle,
-    hsl(20, 91%, 48%),
-    hsl(270, 100%, 20%) 65%
+    /* width: var(--size); */
+    /* height: var(--size); */
+    width: 100%;
+    height: 100%;
+    filter:blur(100px); /* blur(calc(var(--size) / 4)); */
+    background-image: radial-gradient(
+        circle,
+        hsl(20, 91%, 48%),
+        hsl(270, 100%, 20%) 65%
     );
     background-size: cover;
     background-position: center;
@@ -46,7 +49,7 @@ hsl(20, 100%, 50%) */
     
 @media (min-width: 720px) {
       .gradient {
-        --size: 500px;
+        --size: 50%;
       }
 }
   
@@ -62,7 +65,7 @@ hsl(20, 100%, 50%) */
     border: 2px solid #444;
     border-style: groove;
     border-radius: 15px;
-    padding: 80px 38px;
+    padding: 5%;
     width: 90%;
     max-width: 470px;
     text-align: center;
@@ -74,13 +77,14 @@ hsl(20, 100%, 50%) */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 /* i made a circle with an exclamation mark inside because i wanted it to look like the notification panel for the screen that shows up in solo leveling but the padding got complicated every time the image of the dog showed up so i guess its the thought that counts*/
-.circle{
+
+/*.circle{
     position: relative;
-    width: 37px;
-    height: 37px;
+    width: 5%;
+    height: 5%;
     border: 2px solid white;
     border-radius: 50%;
     background-color: transparent;
@@ -88,15 +92,15 @@ hsl(20, 100%, 50%) */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 27px;
-    margin-right: 38px;
-    margin-left: 7px;
-    margin-bottom: 230px;
+    font-size: 2rem;
+    margin-right: 5%;
+    margin-left: 1%;
+    margin-bottom: 20%;
     z-index: 10;
 }
-
+*/
 .title-content h1 {
-    font-size: 29px;
+    font-size: 2.5rem;
     text-align:center;
     margin:0;
     color: white;
@@ -112,13 +116,13 @@ hsl(20, 100%, 50%) */
 
 button {
     font-size: 1.5rem;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 2% 4%;
+    margin: 2%;
     border: none;
     border-radius: 10px;
     cursor:pointer;
     transition: transform 0.2s;
-    margin-right: 60px;
+    margin-right: 10%;
 }
 
 #yesButton {
@@ -133,9 +137,9 @@ button {
 
 #noImage {
     display: none;
-    max-width: 300px;
+    max-width: 80%;
     margin-top: 20px;
-    position: relative;
+    position: 5%;
     z-index: 10;
 }
 #noImage.show-image {
@@ -149,7 +153,7 @@ button {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10%);
     }
 }
 
@@ -169,22 +173,23 @@ button:hover {
 /* for smaller screens */
 @media (max-width: 600px) {
     .title-frame {
-        padding: 20px;
+        padding: 5%;
     }
 
     .title-content h1 {
-        font-size: 20px;
+        font-size: 1.5rem;
     }
 
-    .circle {
-        width: 30px;
-        height: 30px;
+    /*.circle {
+        width: 8%;
+        height: 8%;
         font-size: 20px;
         left: -40px; 
     }
+*/
 
     button {
         font-size: 1.2rem;
-        padding: 8px 16px;
+        padding: 2% 4%;
     }
 }
