@@ -22,8 +22,8 @@ body {
   
     /* width: var(--size); */
     /* height: var(--size); */
-    width: 132%;
-    height: 150%;
+    width: 160%;
+    height: 162%;
     filter:blur(70px); /* blur(calc(var(--size) / 4)); */
     background-image: radial-gradient(
         circle,
