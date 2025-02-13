@@ -1,0 +1,188 @@
+body {
+    position: relative;
+    background-color: #071c39;
+    inset: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    min-height: 100vh;  
+}
+
+.gradient {
+    position:absolute;
+    inset: 0;
+    z-index: -1;
+    --size: (
+    width: 39.06%
+    height: 69.44%
+    );
+    --speed: 21s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: radial-gradient( 
+    hsl(20, 91%, 48%),
+    hsl(270, 100%, 20%) 65%
+    );
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+/*hsl (270, 100%, 20%)
+hsl(20, 100%, 50%) */
+  
+@keyframes rotate {
+      0% {
+          transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+}
+    
+@media (min-width: 720px) {
+      .gradient {
+        --size: 500px;
+      }
+}
+  
+  /* to transition when you change the viewport size. */
+* {
+    transition: all 0.5s ease-out;
+}
+  
+
+.title-frame {
+    position: relative;
+    background-color: transparent; 
+    border: 2px solid #444;
+    border-style: groove;
+    border-radius: 15px;
+    padding: 80px 38px;
+    width: 90%;
+    max-width: 470px;
+    text-align: center;
+    box-shadow: 0 0 7px rgba(138, 7, 7, 0.5);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+}
+/* i made a circle with an exclamation mark inside because i wanted it to look like the notification panel for the screen that shows up in solo leveling but the padding got complicated every time the image of the dog showed up so i guess its the thought that counts*/
+.circle{
+    width: 37px;
+    height: 37px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    margin-right: 38px;
+    margin-left: 7px;
+    margin-bottom: 230px;
+    position: relative;
+    z-index: 10;
+}
+
+.title-content h1 {
+    font-size: 29px;
+    text-align:center;
+    margin:0;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 142px;
+}
+
+.buttons {
+    font-family: cursive;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: transform 0.2s;
+    margin-right: 60px;
+}
+
+#yesButton {
+    background-color: #600957;
+    color: white;
+}
+
+#noButton {
+    background-color: #650707;
+    color: white;
+}
+
+#noImage {
+    display: none;
+    max-width: 300px;
+    margin-top: 20px;
+}
+.show-image {
+    display: block !important;
+    opacity: 1 !important;
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+img {
+    animation: bounce 7s infinite;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+/* for smaller screens */
+@media (max-width: 600px) {
+    .title-frame {
+        padding: 20px;
+    }
+
+    .title-content h1 {
+        font-size: 20px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
